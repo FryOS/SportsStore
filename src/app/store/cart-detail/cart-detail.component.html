@@ -23,6 +23,7 @@
         <input type="number" class="form-control-sm"
                style="width:5em"
                [value]="line.quantity"
+               min="0"
                (change)="cart.updateQuantity(line.product,
   $event.target.value)"/>
       </td>
