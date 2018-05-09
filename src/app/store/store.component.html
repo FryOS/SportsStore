@@ -18,7 +18,10 @@
       </button>
     </div>
     <div class="col-9">
-      <div *ngFor="let product of products" class="card myCard">
+
+     <input #mySearch placeholder="Search..." type="text" class="form-control" id="search" [(ngModel)]="search">
+
+      <div *ngFor="let product of products | searchPipe: 'name':search" class="card myCard">
         <div class="card-header">
             <h4>
               {{product.name}}
